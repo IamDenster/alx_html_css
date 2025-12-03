@@ -1,1 +1,37 @@
+/* Make body a vertical flex container */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 
+/* Header and footer keep natural height */
+header, footer {
+    padding: 20px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+/* Main must grow to fill remaining height */
+main {
+    display: flex;
+    flex: auto;               /* expands automatically */
+    flex-direction: row;      /* article + aside side by side */
+}
+
+/* Article: takes 2 parts */
+article {
+    flex: 2;                  /* 2/3 of width */
+    border: 1px solid #ccc;
+    padding: 20px;
+    overflow-y: auto;         /* scroll */
+}
+
+/* Aside: takes 1 part */
+aside {
+    flex: 1;                  /* 1/3 of width */
+    border: 1px solid #ccc;
+    padding: 20px;
+    overflow-y: auto;         /* scroll */
+}
