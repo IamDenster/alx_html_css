@@ -13,6 +13,12 @@ header, footer {
     border: 1px solid #ddd;
 }
 
+/* Align header content properly */
+header {
+    display: flex;
+    align-items: center;   /* vertically centers Home & Tweets */
+}
+
 /* Main must grow to fill remaining height */
 main {
     display: flex;
@@ -34,4 +40,20 @@ aside {
     border: 1px solid #ccc;
     padding: 20px;
     overflow-y: auto;         /* scroll */
+}
+
+/* Navigation: make Home & Tweets horizontal */
+header ul {
+    list-style: none;        /* remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;           /* same line */
+    gap: 60px;               /* space between links */
+}
+
+/* Optional: tidy up links */
+header a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
 }
